@@ -18,7 +18,9 @@ body {
   padding: 10px;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
   gap: 10px;
 
   /* align-items: start; */
@@ -64,4 +66,10 @@ body {
 .item:nth-of-type(4) {
   /* background: #333;
   grid-row: 2 / 4; */
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
